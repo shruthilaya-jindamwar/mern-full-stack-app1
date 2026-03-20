@@ -16,6 +16,11 @@
 package.json - backend\package.json
 server.js - backend\server.js
 
+```shell
+# npm init -y
+# npm install express mysql2 cors
+```
+
 1. Install dependencies
 
 ```shell
@@ -39,4 +44,18 @@ http://localhost:5000/students
 
 ---
 
-## Create client
+## Create client / frontend
+
+```bash
+# npx create-react-app school-app
+# cd school-app
+# npm install axios
+
+# npm audit fix --force
+```
+
+```bash
+cd school-app
+npm i
+npm start
+```
