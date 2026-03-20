@@ -1,11 +1,16 @@
 import logo from "./logo.svg";
 import "./App.css";
+import React, { useEffect, useState } from "react";
 
 function App() {
-  let arr = [
-    { name: "student1", age: 20, course: "math" }, //
-    { name: "student2", age: 30, course: "social" }, //
-  ];
+  const [students, setStudents] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/students")
+      .then((res) => res.json())
+      .then((data) => setStudents(data))
+      .catch((err) => console.error(err));
+  }, []);
 
   return (
     <div className="App">
@@ -20,7 +25,7 @@ function App() {
           </thead>
 
           <tbody>
-            {arr.map((item) => {
+            {students.map((item) => {
               return (
                 <tr>
                   <td>{item.name}</td>
