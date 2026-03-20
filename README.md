@@ -2,49 +2,39 @@
 
 ## Create database
 
-1. MySql Work bench
+1. open MySql Work bench
 2. open file & run each statements
-   SQL
 
 - C:\code\coaching\shru\mern-full-stack-app1\backend\db\mysql-db-statements.sql
-- backend\db\mysql-db-statements.sql
 
 ---
 
 ## Create Node.js Server
 
-package.json - backend\package.json
-server.js - backend\server.js
+<!-- package.json - backend\package.json -->
+<!-- server.js - backend\server.js -->
 
 ```shell
 # npm init -y
 # npm install express mysql2 cors
 ```
 
-1. Install dependencies
+## Server - Install dependencies & Run
+
+1
 
 ```shell
 cd C:\code\coaching\shru\mern-full-stack-app1\backend\
-cd backend
 npm i
-```
-
-2. Run server
-
-```shell
 node server.js
 ```
 
-Go to
-
-```
-http://localhost:5000/
-http://localhost:5000/students
-```
+2
+Go to http://localhost:5000/students
 
 ---
 
-## Create client / frontend
+## Client/Frontend/App - Install dependencies & Run
 
 ```bash
 # npx create-react-app school-app
@@ -55,7 +45,7 @@ http://localhost:5000/students
 ```
 
 ```bash
-cd school-app
+cd C:\code\coaching\shru\mern-full-stack-app1\school-app\
 npm i
 npm start
 ```
