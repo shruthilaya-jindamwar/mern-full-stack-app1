@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import React, { useEffect, useState } from "react";
 
@@ -13,30 +12,28 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <table style={{ backgroundColor: "grey" }}>
-          <thead>
-            <tr>
-              <th>name</th>
-              <th>age</th>
-              <th>course</th>
+    <div style={{ padding: "20px" }}>
+      <h2>Student List</h2>
+      <table border="1" cellPadding="10">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Course</th>
+          </tr>
+        </thead>
+        <tbody>
+          {students.map((student) => (
+            <tr key={student.id}>
+              <td>{student.id}</td>
+              <td>{student.name}</td>
+              <td>{student.age}</td>
+              <td>{student.course}</td>
             </tr>
-          </thead>
-
-          <tbody>
-            {students.map((item) => {
-              return (
-                <tr>
-                  <td>{item.name}</td>
-                  <td>{item.age}</td>
-                  <td>{item.course}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </header>
+          ))}
+        </tbody>
+      </table>
     </div>
   );
 }
