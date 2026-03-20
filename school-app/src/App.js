@@ -1,22 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
+  let arr = [
+    { name: "student1", age: 20, course: "math" }, //
+    { name: "student2", age: 30, course: "social" }, //
+  ];
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <table style={{ backgroundColor: "grey" }}>
+          <thead>
+            <tr>
+              <th>name</th>
+              <th>age</th>
+              <th>course</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            {arr.map((item) => {
+              return (
+                <tr>
+                  <td>{item.name}</td>
+                  <td>{item.age}</td>
+                  <td>{item.course}</td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
       </header>
     </div>
   );
