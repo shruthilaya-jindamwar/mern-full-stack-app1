@@ -17,3 +17,11 @@ VALUES
     ('Kiran', 19, 'Physics');
     
 SELECT * FROM school.students;
+
+INSERT INTO
+    students (name, age, course)
+VALUES
+    ('Shru', 1, 'AI')
+;
+
+SELECT * FROM school.students;
